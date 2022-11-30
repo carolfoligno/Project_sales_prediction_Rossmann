@@ -177,3 +177,6 @@ Melhor cenário | 269,259,431.38
 Para melhorar o storytelling para que o CFO consiga obter com melhor clareza as informações. Os resultados obtidos, tanto pela Análise Exploratória de Dados como pelo Aprendizado de Máquina, foram colocados em produção. Disponibilizados de forma online. 
 
 **Bot Telegram**
+
+https://user-images.githubusercontent.com/80589529/204912637-4cbe0dea-ec62-4115-8bf0-8ab2a9faec45.mp4
+
