@@ -1,5 +1,7 @@
 <h1 style="text-align: center;">Previsão de Vendas das Lojas Rossmann</h1>
 
+![](https://drive.google.com/uc?id=1J6vVNu-K-iEDaP8rCXKfkJtXmuVxrC6B)
+
 Este projeto foi orientado pela [Comunidade DS](https://comunidadeds.com/), utilizando os dados disponíveis no [Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales) da Rede de Lojas Rossmann.
 
 **Produto final:**
