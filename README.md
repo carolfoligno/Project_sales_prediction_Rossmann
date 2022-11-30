@@ -95,3 +95,85 @@ Do EDA realizado foi possível extrair alguns Insights sobre o Negócio.
 - Pode ser devido a sua grande quantidade de lojas de sortimento básico presente nos dados, equivale a 52%.
 
 ![](https://drive.google.com/uc?id=1iMabA9j0MH1P0nZK_KpOerZKp6ZNIWoV)
+
+#### **2. Lojas deveriam vender mais ao longo dos anos.**
+
+**FALSA**
+
+- Ao longo dos anos, foi possivel observar um declinio de vendas das lojas.
+- Como o ano de 2015 não foi finalizado, por isso há uma queda drástica no somatório de vendas.
+
+![](https://drive.google.com/uc?id=1ClCyRZjgt2WJZFRGmtPVvuyaNzmQ_mL_)
+
+#### **3. Lojas abertas durante o feriado de Natal deveriam vender mais.**
+
+**VERDADEIRO**
+
+- Numa análise geral dos anos de 2013 e 2014, o feriado natalino tem uma média de vendas maior que os outros feriados do ano.
+- Já numa análise detalhada de cada ano, foi possivel observar que no ano de 2013, o feriado da pásco superou a media de vendas do Natal.
+- Comparativo entre os outros feriados
+- Como o ano de 2015 não foi finalizado, foi excluido da análise
+- Como existem quantidade diferente de registro de cada feriado foi calculado a média e não o somatório de vendas de cada feriado.
+
+![](https://drive.google.com/uc?id=1hO4OT55orxKRpunWrCgIqL8V944Jr2Zr)
+
+<h2>5. Algoritmo de Machine Learning</h2>
+
+Foram selecionados os seguintes algoritmos de Machine Learning para Regressão:
+
+- Random Forest Regression
+- Linear Regression
+- Lasso
+- XGBoots
+
+Se utilizando de um método de Cross-Validation, que tem como fim pegar diferentes fatias do tempo dos dados de treino para que torne possível medir uma real Performance do Modelo.  Foi obtido as seguintes métricas:
+
+Modelo | MAE | MAPE | RMSE
+--------|------------ | --------- | ------
+Random Forest Regression | 833.511708 | 0.120853 | 1238.412287
+XGBoot Regression | 997.735638 | 0.143812 | 1439.025268
+Average Model | 1354.800353 | 0.455051 | 1835.135542
+Linear Regression - Lasso | 1891.712702 | 0.289104 | 2744.465343
+Linear Regression | 2062.201665 | 0.301743 | 3076.085627
+
+ - MAE → A soma da diferença entre o valor real e o valor da predição, dividido pelo numero de valor predito (média do error).
+
+ - MAPE → É a porcentagem de error do MAE. Mostra o quão longe a predição está do valor real, na média, em porcentagem.
+
+ - RMSE (Root Mean Square Error)→ Muito usado para calcular a performance do algoritmo Machine Learning, pois atribui peso, ou seja, atribui maior peso a erros maiores. Sendo rígido aos outliers.
+
+Como observado, o algoritmo Random Forest Regression um porcentagem de erro MAPE menor dos outros, seguido pelo algoritmo XGBoost Regression. 
+
+Nesse projeto, o algoritmo XGBoost foi escolhido para fazer a previsão de vendas dos dados, devido a sua rapidez para treinar e ajustar comparado ao Random Forest.
+
+Com os ajustes os hiperparâmetros do algoritmo XGBoost, tendo como objetivo aumentar a precisão e velocidade de corrida. Para esse auto-ajuste foi utilizado o método RandomSearch (Pesquisa Aleatória). Depois do ajuste o modelo obteve as seguintes métricas:
+
+Modelo | MAE | MAPE | RMSE
+--------|------------ | --------- | ------
+XGBoot Regression | 997.695478 | 0.14018 | 1421.43486
+
+<h2>6. Resultados da Modelagem para o Negócio</h2>
+
+Como comparativo de resultados, foi criado uma tabela com a previsão do modelo, assim como o pior e melhor cenário de previsão de acordo com as métricas de error. 
+
+Logo abaixo contem uma pequena amostra desses resultados.
+Loja | Previsão | Pior cenário | Melhor cenário | MAE | MAPE
+--------|------------ | --------- | ------ | ------ | --------
+381 | 32615.09 | 325691.15 | 326609.03 | 458.94 | 0.051
+855 | 224139.95 | 223780.94 | 224498.96 | 359.00 | 0.056
+489 | 277889.31 | 277412.83 | 278365.79 | 476.48 | 0.056
+272 | 223818.07 | 223424.81 | 224211.33 | 393.26 | 0.058
+1015 | 223437.73 | 223054.72 | 223820.74 | 383.01 | 0.060
+
+No que se refere ao total de vendas nas próximas 6 semanas, este foi o resultado:
+Cenário | Valores 
+--------|------------ 
+Previsão | 268,146,080.00 
+Pior cenário | 267,032,717.00 
+Melhor cenário | 269,259,431.38
+
+<h2>7. Conclusão</h2>
+
+Para melhorar o storytelling para que o CFO consiga obter com melhor clareza as informações. Os resultados obtidos, tanto pela Análise Exploratória de Dados como pelo Aprendizado de Máquina, foram colocados em produção. Disponibilizados de forma online. 
+
+**Bot Telegram**
