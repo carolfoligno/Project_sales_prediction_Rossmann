@@ -1,0 +1,6 @@
+[submodule "bot_rossmann/telebot_rossmann"]
+	path = bot_rossmann/telebot_rossmann
+	url = https://github.com/carolfoligno/telebot_rossmann.git
+[submodule "api_rossmann/deploy_render_project_rossmann"]
+	path = api_rossmann/deploy_render_project_rossmann
+	url = https://github.com/carolfoligno/deploy_render_project_rossmann.git
