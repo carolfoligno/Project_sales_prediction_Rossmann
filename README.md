@@ -5,7 +5,7 @@
 Este projeto foi orientado pela [Comunidade DS](https://comunidadeds.com/), utilizando os dados disponíveis no [Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales) da Rede de Lojas Rossmann.
 
 **Produto final:**
-- [Dashboard](https://carolfoligno-rossmann-project-dashboard-1lraay.streamlit.app/): Análise Exploratória de Dados
+- [Dashboard](https://dashboard-rossmann-ccf.streamlit.app/): Análise Exploratória de Dados
 - [BotTelegram](t.me/Rossmann_cf_Bot): Previsão de Vendas com Aprendizado de Máquina (Machine Learning)
 
 <h2>1. Entendendo o Problema de Negócio:</h2>
